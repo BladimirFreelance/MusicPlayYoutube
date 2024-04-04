@@ -19,7 +19,7 @@ class SystemTrayApp(QtWidgets.QWidget):
 
     def initTrayIcon(self):
         self.tray_icon = QtWidgets.QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QtGui.QIcon(resource_path("Design.png")))
+        self.tray_icon.setIcon(QtGui.QIcon(resource_path("YourIcon.png")))
 
         quit_action = QtWidgets.QAction("Exit", self)
         quit_action.triggered.connect(QCoreApplication.instance().quit)
@@ -53,6 +53,6 @@ if __name__ == '__main__':
     w = SystemTrayApp()
     w.hide()
     # Пример URL трансляции; замените на актуальный
-    youtube_live_url = "https://www.youtube.com/live/zYFel2Ch4YI?si=_4ATIavgG2tK06XB"
+    youtube_live_url = "https://www.youtube.com/live/Your URL Yotube Live Music"
     w.play_youtube_live(youtube_live_url)
     sys.exit(app.exec_())
