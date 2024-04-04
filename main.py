@@ -19,7 +19,7 @@ class SystemTrayApp(QtWidgets.QWidget):
 
     def initTrayIcon(self):
         self.tray_icon = QtWidgets.QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QtGui.QIcon(resource_path("YourIcon.png")))
+        self.tray_icon.setIcon(QtGui.QIcon(resource_path("YourIcon.png"))) # измените YourIcon.png на имя вашего файла, он должен находитмя в каталоге где находится ваш main.py
 
         quit_action = QtWidgets.QAction("Exit", self)
         quit_action.triggered.connect(QCoreApplication.instance().quit)
